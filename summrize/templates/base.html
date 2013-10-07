@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} Title here {% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/Users/tgameco/Django/projects/summrize/assets/css/main.css"/>
+    {% block css-link %} {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="/">Summrize</a></h1>
+            {% block buttons %}
+            {% endblock %}
+        </nav>
+    </header>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+<footer>
+
+</footer>
+</html>

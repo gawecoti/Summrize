@@ -1,0 +1,24 @@
+#submit_text textarea {
+    border-radius: 2px;
+    width: 100%;
+}
+
+#submit_text input[type='text'] {
+    border-radius: 2px;
+}
+
+#submit_text input[type='submit'] {
+    background-color: #FFBF00;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+
+#submit_text input[type='submit']:hover {
+    background-color: #B28500;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}

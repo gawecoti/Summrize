@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block css-link %}
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/submit.css"/>
+{% endblock %}
+
+{% block content %}
+    <form action="/text/submit" method="post" id="submit_text">
+        {% csrf_token %}
+        <textarea name="text" id="" cols="30" rows="40"></textarea>
+        <input type="text" name="num_sentences" placeholder="Number of sentences to return"/>
+        <input type="submit" value="Summarize"/>
+    </form>
+{% endblock %}

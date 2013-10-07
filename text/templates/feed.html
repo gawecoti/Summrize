@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block css-link %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/feed.css"/>
+{% endblock %}
+
+{% block buttons %}
+    <form action="/" id="back">
+        <button>Submit text</button>
+    </form>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for entry in text_list %}
+        <li>
+            <h3>{{ entry.title }}</h3>
+            <p>{{ entry.text }}</p>
+            <span>Date posted: {{ entry.date }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
