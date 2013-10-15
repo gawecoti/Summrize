@@ -1,10 +1,24 @@
+h3 {
+    margin: 0 0 15px 0;
+}
+
+label {
+    color: white;
+}
+
 #submit_text textarea {
     border-radius: 2px;
-    width: 100%;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+    padding: 4px;
+    width: 99%;
 }
 
 #submit_text input[type='text'] {
     border-radius: 2px;
+    border: none;
+    padding: 5px;
+    width: 30px;
 }
 
 #submit_text input[type='submit'] {
@@ -12,6 +26,7 @@
     border: none;
     border-radius: 2px;
     color: white;
+    float: right;
     padding: 8px;
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0,0,0,.2);
@@ -21,4 +36,8 @@
     background-color: #B28500;
     cursor: pointer;
     transition: 0.15s ease-in-out;
+}
+
+#submit_text #title {
+    width: 260px;
 }

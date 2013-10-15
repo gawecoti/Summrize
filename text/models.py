@@ -4,7 +4,8 @@ from model_utils.models import TimeStampedModel
 
 # Create your models here.
 class Text(TimeStampedModel):
-    text = models.TextField()
+    mean_scored_text = models.TextField()
+    top_n_scored_text = models.TextField()
     title = models.CharField(max_length=255, default='Text')
     slug = models.SlugField(max_length=255)
     date = models.DateTimeField(auto_now_add=True, editable=False)

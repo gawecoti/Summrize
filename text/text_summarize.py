@@ -6,7 +6,6 @@ import json
 import numpy as np
 
 MAX_INDEX_DIST = 5
-TOP_SENTENCES = 5
 
 def score_sentences (sentences, important_words):
     sentence_scores = []
@@ -57,7 +56,7 @@ def score_sentences (sentences, important_words):
 
     return sentence_scores
 
-def summarize(text):
+def summarize(text, TOP_SENTENCES):
     text_data = text
     important_words = []
 
@@ -96,6 +95,8 @@ def summarize(text):
 
     for sentence_index in top_n_scored:
         summarized_sentences_top += sentences[sentence_index[0]]
+
+    print summarized_sentences_top.encode('utf-8')
 
     return ((summarized_sentences_mean, summarized_sentences_top))
 

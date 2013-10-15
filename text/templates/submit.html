@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/submit.css"/>
 {% endblock %}
 
+{% block title %}
+Summrize | Enter text
+{% endblock %}
+
 {% block content %}
-    <form action="/text/submit" method="post" id="submit_text">
+    <h3>Enter title, text and click summarize:</h3>
+    <form action="/text/submit/" method="post" id="submit_text">
         {% csrf_token %}
-        <textarea name="text" id="" cols="30" rows="40"></textarea>
-        <input type="text" name="num_sentences" placeholder="Number of sentences to return"/>
+        <input type="text" name="title" id="title" placeholder="Title"/>
+        <textarea name="text" id="" cols="25" rows="25" placeholder="Enter text"></textarea>
+        <label for="">Number of sentences:</label>
+        <input type="text" name="num_sentences"/>
         <input type="submit" value="Summarize"/>
     </form>
 {% endblock %}

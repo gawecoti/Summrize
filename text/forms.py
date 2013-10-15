@@ -4,4 +4,4 @@ from .models import Text
 class TextForm(ModelForm):
     class Meta:
         model = Text
-        fields = ['text']
+        fields = ['title']
