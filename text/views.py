@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 class FeedView(ListView):
     model = Text
     template_name = 'feed.html'
+    paginate_by = 5
 
     def get_queryset(self):
         return self.model.objects.all().order_by('-date')

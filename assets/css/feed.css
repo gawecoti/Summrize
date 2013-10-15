@@ -47,8 +47,27 @@ p {
 #content li {
     border-bottom: 2px white solid;
     padding: 0 0 20px 0;
+    margin: 0 0 35px 0;
 }
 
 #content span {
     font-size: 12px;
+}
+
+/* Pagination */
+.pagination {
+    margin: 10px 0 10px 0;
+    overflow: auto;
+}
+
+#previous:hover, #next:hover {
+    text-decoration: underline;
+}
+
+#previous {
+    float: left;
+}
+
+#next {
+    float: right;
 }
